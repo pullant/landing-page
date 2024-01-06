@@ -12,26 +12,29 @@
 	--container-height: 400px;
 }
 
-/* * { */
-/* 	color: black; */
-/* 	border: 1px solid green; */
-/* } */
+/**
+* {
+	border: 1px solid green;
+}
+/**/
 
 body {
 	display: flex;
+	align-items: center;
 	flex-direction: column;
-	align-items: center; /* center flex items */
+	margin: 0 auto;
+	width: 1200px;
 	background-color: var(--dark-background-color);
-	margin: 0 auto; /* center body */
 	font-family: Roboto, sans-serif;
 }
 
+/*done*/
 .header {
 	display: flex;
 	align-items: center;
-	width: var(--container-width);
-	background-color: var(--dark-background-color);
 	height: 80px;
+	background-color: var(--dark-background-color);
+	width: var(--container-width);
 }
 .header .logo {
 	color: var(--bright-light-font-color);
@@ -47,11 +50,11 @@ body {
 
 .footer {
 	display: flex;
-	justify-content: center;
 	align-items: center;
 	height: 80px;
-	background-color: var(--dark-background-color);
+	justify-content: center;
 	width: var(--container-width);
+	background-color: var(--dark-background-color);
 }
 .footer div {
 	color: var(--dim-light-font-color);
@@ -60,100 +63,90 @@ body {
 
 .presentation {
 	display: flex;
-	width: var(--container-width);
-	height: var(--container-height);
-	background-color: var(--dark-background-color);
 	align-items: center;
-}
-.presentation .title {
-	color: #F9FAF8;
-	font-size: 48px;
-	font-weight: bolder;
-	margin: 0px;
-}
-.presentation p {
-	color: #E5E7EB;
-	font-size: 18px;
-	margin: 0.5em 0;
-}
-.presentation button {
-	color: #F9FAF8;
-	font-weight: bold;
-	background-color: #3882FA;
-	padding: 0.5em 2em;
-	border-radius: 8px; /* rounded corners */
-	border: none;
+	height: var(--container-height);
+	width: var(--container-width);
+	background-color: var(--dark-background-color);
 }
 .presentation .text,
 .presentation .image {
-	flex: 1;
+	flex: 1; /* make both sides equal */
 }
 .presentation .image {
 	display: flex;
 	justify-content: center;
-	align-items: center;
 }
-.image img {
-	max-width: 100%; /* Ensure the image doesn't exceed the container's width */
-	max-height: 100%; /* Ensure the image doesn't exceed the container's height */
+.presentation .title {
+	color: var(--bright-light-font-color);
+	font-size: var(--1-font-size);
+	font-weight: bolder;
+}
+.presentation p {
+	color: var(--dim-light-font-color);
+	font-size: var(--4-font-size);
+	margin: 0.5em 0;
+}
+.presentation button {
+	background-color: var(--light-background-color);
+	border-radius: 8px;
+	border: none;
+	color: var(--bright-light-font-color);
+	font-weight: bold;
+	padding: 0.5em 2em;
 }
 
 
 .info {
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	background-color: #FFFFFF;
-	flex-direction: column; /* display flex items elements vertically */
+	flex-direction: column;
 	height: var(--container-height);
+	justify-content: center;
 	width: 100%;
+	background-color: #FFFFFF;
 }
-
+.info .title {
+	color: var(--dark-background-color);
+	font-size: var(--2-font-size);
+	font-weight: bolder;
+	padding: 1em;
+}
 .info .images {
 	display: flex;
 }
 .info .post {
-	width: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	margin: 20px 20px 50px;
 }
 .post img {
-	border: 3px solid #3882FA;
-	border-radius: 8px; /* rounded corners */
+	border-radius: 8px;
+	border: 3px solid var(--light-background-color);
 	margin-bottom: 10px;
 }
-
-.post {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-}
-
-.info .title {
-	color: #1F2937;
-	font-size: 36px;
-	font-weight: bolder;
-	padding: 1em;
+.post div {
+	width: 150px;
 }
 
 .quote {
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	background-color: #E5E7EB;
-	flex-direction: column; /* display flex items elements vertically */
 	height: var(--container-height);
+	justify-content: center;
 	width: 100%;
+	background-color: var(--dim-light-font-color);
 }
 .quote .text {
-	color: #1F2937;
-	width: 800px;
-	font-size: 36px;
-	font-weight: lighter;
+	color: var(--dark-background-color);
+	font-size: var(--2-font-size);
 	font-style: italic;
+	font-weight: lighter;
+	width: 800px;
 }
 .quote .author {
-	color: #1F2937;
-	font-size: 24px;
+	color: var(--dark-background-color);
+	font-size: var(--3-font-size);
 	font-weight: bold;
 	margin: 10px 0 0;
 	text-align: right;
@@ -161,40 +154,36 @@ body {
 
 .calltoaction {
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	/* flex-direction: column; */
-	background-color: #FFFFFF;
 	height: var(--container-height);
+	justify-content: center;
 	width: 100%;
+	background-color: #FFFFFF;
 }
-
-.calltoaction .text {
+.calltoaction .content {
 	display: flex;
 	align-items: center;
-	background-color: #3882FA;
-	border-radius: 8px; /* rounded corners */
+	border-radius: 8px;
 	justify-content: space-around;
 	padding: 40px 0;
 	width: var(--container-width);
+	background-color: var(--light-background-color);
 }
-
 .calltoaction .title{
-	color: #F9FAF8;
-	font-size: 24px;
+	color: var(--bright-light-font-color);
+	font-size: var(--3-font-size);
 	font-weight: bold;
 }
-
-.calltoaction .exp {
+.calltoaction .text {
 	color: var(--dim-light-font-color);
-	font-size: 18px;
+	font-size: var(--4-font-size);
 	padding: 0;
 }
 .calltoaction button{
-	color: #F9FAF8;
+	background-color: var(--light-background-color);
+	border-radius: 8px;
+	border: 1px solid var(--bright-light-font-color);
+	color: var(--bright-light-font-color);
 	font-weight: bold;
-	background-color: #3882FA;
 	padding: 0.5em 2em;
-	border-radius: 8px; /* rounded corners */
-	border: 1px solid #F9FAF8;
 }
